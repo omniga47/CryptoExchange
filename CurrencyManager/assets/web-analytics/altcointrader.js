@@ -66,7 +66,7 @@ function LoadAltKraData() {
                             $("#LastUpdateAlt").text(split[1]);
 
                             var today = new Date();
-                            var krakenDate = new Date(split[0]);
+                            var krakenDate = new Date(split[0]); 
                             var altCoinDate = new Date(split[0]);
                             //var diffMinsKraken = Math.round(((diffMsKraken % 86400000) % 3600000) / 60000); // minutes
                             //var diffMinsAltCoin = Math.round(((diffMsAltCoin % 86400000) % 3600000) / 60000); // minutes

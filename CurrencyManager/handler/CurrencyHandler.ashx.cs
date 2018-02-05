@@ -79,7 +79,7 @@ namespace CurrencyManager.handler
             return serializer.Serialize(new HandlerResponse(0, "Success", returnString));
 
         }
-
+         
 
         public string GetBitCoin30secData(System.Web.SessionState.HttpSessionState session)
         {

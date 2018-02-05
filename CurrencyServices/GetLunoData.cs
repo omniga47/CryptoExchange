@@ -17,7 +17,7 @@ namespace CurrencyServices
     {
         private int processTimerTick = 30000;
         private System.Timers.Timer processTimer;
-        private bool isStopped = false;
+        private bool isStopped = false; 
         private static object lockobject = new object();
 
 

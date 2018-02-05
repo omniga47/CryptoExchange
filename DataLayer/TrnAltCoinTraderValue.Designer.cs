@@ -3026,8 +3026,7 @@ SELECT TrnAltCoinTraderValueId, TrnAltCoinTraderValueGuid, MstCurrencyListGuid, 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT CoinValue, CreateDate, MstCurrencyListGuid, PriceValue, PrmCurrencyId, PrmCurrencySourceId, PrmSellBuyId, SecurityKey, TotalValue, TrnAltCoinTraderValueGuid, TrnAltCoinTraderValueId FROM TrnAltCoinTraderValue WHERE (SecurityKey = @SecurityKey)
-AND PrmSellBuyId = @PrmSellBuyId";
+            this._commandCollection[1].CommandText = @"SELECT CoinValue, CreateDate, MstCurrencyListGuid, PriceValue, PrmCurrencyId, PrmCurrencySourceId, PrmSellBuyId, SecurityKey, TotalValue, TrnAltCoinTraderValueGuid, TrnAltCoinTraderValueId FROM TrnAltCoinTraderValue WHERE (SecurityKey = @SecurityKey) AND (PrmSellBuyId = @PrmSellBuyId)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecurityKey", global::System.Data.SqlDbType.UniqueIdentifier, 16, global::System.Data.ParameterDirection.Input, 0, 0, "SecurityKey", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrmSellBuyId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PrmSellBuyId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

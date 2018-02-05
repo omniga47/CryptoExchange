@@ -102,7 +102,7 @@ namespace CurrencyServices
 
         public void DebugMe()
         {
-            // why wait
+            // why wait 
             OnStart(new string[0]);
 
         }

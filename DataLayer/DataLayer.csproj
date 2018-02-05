@@ -56,6 +56,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="TrnAltCoinTraderValue.cs">
+      <DependentUpon>TrnAltCoinTraderValue.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TrnAltCoinTraderValue.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

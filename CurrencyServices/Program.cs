@@ -17,7 +17,7 @@ namespace CurrencyServices
         /// </summary>
         static void Main(string[] args)
         {
-            /*       ServiceBase[] ServicesToRun;
+            /*       ServiceBase[] ServicesToRun; 
 
                    ServicesToRun = new GetAltcointraderData[]
                    {

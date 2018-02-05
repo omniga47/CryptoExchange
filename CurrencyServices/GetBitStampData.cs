@@ -16,7 +16,7 @@ namespace CurrencyServices
 {
     public partial class GetBitStampData : ServiceBase
     {
-        private int processTimerTick = 30000;
+        private int processTimerTick = 30000; 
         private System.Timers.Timer processTimer;
         private bool isStopped = false;
         private static object lockobject = new object();
