@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Omni-XChange - AltCoinTrader</title>
+
+    <!-- stylesheets -->
+    <link href="../assets/fonts/font-roboto.css" rel="stylesheet">
+    <link href="../assets/bootstrap/bootstrap4-alpha3.min.css" rel="stylesheet">
+    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/web-analytics/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Content/jquery-ui.css" />
+    <link rel="stylesheet" href="../Content/jquery.dataTables.css">
+    <link rel="stylesheet" href="../Content/fullcalendar.css" />
+
+    <!-- scripts -->
+    <script src="../assets/jquery/jquery-3.1.0.min.js"></script>
+    <script src="../assets/tether/tether.min.js"></script>
+    <script src="../assets/bootstrap/bootstrap4-alpha3.min.js"></script>
+
+    <script type="text/javascript" src="../assets/web-analytics/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="../assets/web-analytics/jquery-ui.js"></script>
+    <script src="../assets/web-analytics/altcointrader.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            try {
+                // Using defaults:
+
+
+                var url = 'https://api.fixer.io/latest?base=USD';
+                $.get(url, function (data, status) {
+                    debugger;
+                    var usdZarRate = data["rates"]["ZAR"]
+
+                    var newRate = usdZarRate * (new Number($("#forexRate").val()) + 1)
+
+
+                    $("#usdExchangeRate").val(newRate);
+                    LoadAltKraData();
+                });
+
+                //var url2 = 'https://api.fixer.io/latest?base=EUR';
+                //$.get(url2, function (data, status) {
+                //    debugger;
+                //    var eurZarRate = data["rates"]["ZAR"]
+                //    $("#eurExchangeRate").val(eurZarRate);
+                //});
+            }
+            catch (ex) {
+                debugger;
+            }
+
+            
+            setInterval(function () {
+                LoadAltKraData()
+               
+            }, 5000);
+            
+
+            LoadAltKraData();
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-fixed-top" id="header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div id="sidebar-toggle-button">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div class="brand">
+                    <a href="..\index.html">
+                        <span class="hidden-xs-down m-r-3">Omni-XChange </span><span class="lead">AltCoinTrader</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- /header -->
+    <!-- sidebar -->
+    <div class="sidebar-toggle" id="sidebar">
+        <ul class="nav nav-sidebar">
+            <li>
+                <a href="altcointrader.html" class="active">
+                    <i class="fa fa-btc" aria-hidden="true"></i>
+                    <span>AltCoinTrader </span>
+                </a>
+            </li>
+            <li role="separator" class="divider"></li>
+
+        </ul>
+    </div>
+    <!-- /sidebar -->
+    <!-- page-content-wrapper -->
+    <div class="page-content-toggle" id="page-content-wrapper">
+        <div class="container-fluid">
+
+
+            <div class="row" style="padding-bottom:20px;">
+                <table style="width:100%;">
+                    <tr>
+                        <td>
+                            <table style="margin-left:25px;">
+                                <tr>
+                                    <td colspan="5">
+                                        <h4>Trade Parameters</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!--<td style="padding-left:22px;"><span>EUR/ZAR</span><input id="eurExchangeRate" type="text" style="width:70px;margin-left:8px;" /></td>-->
+                                    <td style="margin-left:8px;"><span>USD/ZAR</span><input id="usdExchangeRate" type="text" style="width:70px;margin-left:8px;" /></td>
+                                    <td style="padding-left:22px;">Forex fees</td>
+                                    <td><input id="forexRate" type="text" value="0.0075" style="width:50px;margin-left:12px;" /></td>
+                                    <td style="padding-left:22px;">AltCoin Trade fees</td>
+                                    <td><input id="altCoinRate" type="text" value="0.008" style="width:50px;margin-left:12px;" /></td>
+                                    <td style="padding-left:22px;">Kraken fees %</td>
+                                    <td><input id="krakenRate" type="text" value="0.0024" style="width:50px;margin-left:12px;" /></td>
+                                    <td style="padding-left:22px;">Highlight Mrg %</td>
+                                    <td><input id="hightlightMrg" type="text" value="5" style="width:30px;margin-left:8px;" /></td>
+                                    <td style="padding-left:35px;"><input type="button" value="Recalc" onclick="LoadAltKraData();" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="float:right">
+                            <table style="margin-left:25px;">
+                                <tr>
+                                    <td style="color:darkseagreen"><span id="LastUpdateKra" style="font-weight:bold;">12:14:14 25/01/2018</span> : Kraken Last Updated</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:lightcoral"><span id="LastUpdateAlt" style="font-weight:bold;">12:14:14 25/01/2018</span> : AltCoinTrader Last Updated</td>
+                                </tr>
+                                <tr>
+                                    <td  style="color:lightskyblue"><span id="AltKraTable" style="font-weight:bold;">---</span> : Table Last Updated</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <!-- 1st row -->
+            <div class="row">
+                <table style="width:100%; text-align:center;">
+                    <tr>
+                        <td>
+                            <h2>AltCoinTrader Data - Buying Against Kraken</h2>
+                        </td>
+                    </tr>
+                </table>
+                <table id="AltKrakenUSDData1" class="display" cellspacing="0" width="100%"></table>
+                <table id="AltKrakenUSDData2" class="display" cellspacing="0" width="100%"></table>
+            </div>
+            <!-- /1st row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /page-content-wrapper -->
+
+</body>
+
+</html>
