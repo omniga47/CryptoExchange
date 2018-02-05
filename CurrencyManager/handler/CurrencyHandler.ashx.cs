@@ -10,10 +10,11 @@ namespace CurrencyManager.handler
     /// <summary>
     /// Summary description for CurrencyHandler
     /// </summary>
-    public class CurrencyHandler : IHttpHandler, System.Web.SessionState.IReadOnlySessionState
+    public class CurrencyHandler : IHttpHandler, System.Web.SessionState.IReadOnlySessionState 
     {
 
         JavaScriptSerializer serializer = new JavaScriptSerializer();
+        //Stef first change
 
         public void ProcessRequest(HttpContext context)
         {
