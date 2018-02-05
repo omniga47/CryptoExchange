@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DADBF7C-E743-40A2-967F-293F7B47587E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CurrencyManager</RootNamespace>
+    <AssemblyName>CurrencyManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BusLayer">
+      <HintPath>..\BusLayer\bin\Debug\BusLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLayer">
+      <HintPath>..\DataLayer\bin\Debug\DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\web-analytics\jquery-ui.js" />
+    <Content Include="assets\web-analytics\jquery.dataTables.js" />
+    <Content Include="assets\web-analytics\altcointrader.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Dashboard\bootstrap-responsive.min.css" />
+    <Content Include="Content\Dashboard\bootstrap.min.css" />
+    <Content Include="Content\Dashboard\custom.css" />
+    <Content Include="Content\Dashboard\font-awesome.css" />
+    <Content Include="Content\Dashboard\jquery.fancybox.css" />
+    <Content Include="Content\Dashboard\jqvmap.css" />
+    <Content Include="Content\Dashboard\style.css" />
+    <Content Include="Content\Dashboard\style_default.css" />
+    <Content Include="Content\Dashboard\style_gray.css" />
+    <Content Include="Content\Dashboard\style_navy-blue.css" />
+    <Content Include="Content\Dashboard\style_purple.css" />
+    <Content Include="Content\Dashboard\style_responsive.css" />
+    <Content Include="Content\Dashboard\uniform.default.css" />
+    <Content Include="Content\dataTables.tableTools.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\font\myriadprobold.svg" />
+    <Content Include="Content\font\myriadproit.svg" />
+    <Content Include="Content\font\myriadprolight.svg" />
+    <Content Include="Content\font\myriadproregular.svg" />
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Content\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\Images\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\Images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\img\404.png" />
+    <Content Include="Content\img\500.png" />
+    <Content Include="Content\img\avatar-mini.png" />
+    <Content Include="Content\img\avatar.png" />
+    <Content Include="Content\img\avatar1.jpg" />
+    <Content Include="Content\img\avatar1_small.jpg" />
+    <Content Include="Content\img\avatar2.jpg" />
+    <Content Include="Content\img\avatar3.jpg" />
+    <Content Include="Content\img\avatar3_small.jpg" />
+    <Content Include="Content\img\bg-default.jpg" />
+    <Content Include="Content\img\bg-denim.png" />
+    <Content Include="Content\img\bg-grey.jpg" />
+    <Content Include="Content\img\bg-navy-blue.jpg" />
+    <Content Include="Content\img\bg-purple.jpg" />
+    <Content Include="Content\img\blog\blog-big-img.jpg" />
+    <Content Include="Content\img\blog\blog-sm-1.jpg" />
+    <Content Include="Content\img\blog\blog-sm-2.jpg" />
+    <Content Include="Content\img\blog\blog-sm-3.jpg" />
+    <Content Include="Content\img\blog\blog-sm-4.jpg" />
+    <Content Include="Content\img\blog\blog-sm-5.jpg" />
+    <Content Include="Content\img\blog\blog-thumb-1.jpg" />
+    <Content Include="Content\img\blog\blog-thumb-2.jpg" />
+    <Content Include="Content\img\blog\blog-thumb-3.jpg" />
+    <Content Include="Content\img\body-bg.png" />
+    <Content Include="Content\img\box-bg.png" />
+    <Content Include="Content\img\bread-crumb-bg.jpg" />
+    <Content Include="Content\img\bread-crumb-divider.jpg" />
+    <Content Include="Content\img\bread-crumb-last.jpg" />
+    <Content Include="Content\img\email\email_template2b.png" />
+    <Content Include="Content\img\email\email_template2c.png" />
+    <Content Include="Content\img\email\email_template2d.png" />
+    <Content Include="Content\img\email\email_template2e.png" />
+    <Content Include="Content\img\email\email_template2f.png" />
+    <Content Include="Content\img\email\envelope.png" />
+    <Content Include="Content\img\email\facebook.png" />
+    <Content Include="Content\img\email\logo.png" />
+    <Content Include="Content\img\email\share.png" />
+    <Content Include="Content\img\email\shoe-1.jpg" />
+    <Content Include="Content\img\email\shoe-2.jpg" />
+    <Content Include="Content\img\email\shoe-3.jpg" />
+    <Content Include="Content\img\email\shoe-4.jpg" />
+    <Content Include="Content\img\email\shoe-5.jpg" />
+    <Content Include="Content\img\email\twitter.png" />
+    <Content Include="Content\img\email\vector-lab.png" />
+    <Content Include="Content\img\file-search\ai.png" />
+    <Content Include="Content\img\file-search\doc.png" />
+    <Content Include="Content\img\file-search\email.png" />
+    <Content Include="Content\img\file-search\eps.png" />
+    <Content Include="Content\img\file-search\jpg.png" />
+    <Content Include="Content\img\file-search\pdf.png" />
+    <Content Include="Content\img\file-search\ppt.png" />
+    <Content Include="Content\img\file-search\psd.png" />
+    <Content Include="Content\img\file-search\rss.png" />
+    <Content Include="Content\img\file-search\xls.png" />
+    <Content Include="Content\img\file-search\zip.png" />
+    <Content Include="Content\img\gallery\photo1.jpg" />
+    <Content Include="Content\img\gallery\photo2.jpg" />
+    <Content Include="Content\img\gallery\photo3.jpg" />
+    <Content Include="Content\img\gallery\photo4.jpg" />
+    <Content Include="Content\img\gallery\photo5.jpg" />
+    <Content Include="Content\img\gallery\photo6.jpg" />
+    <Content Include="Content\img\gallery\photo7.jpg" />
+    <Content Include="Content\img\gallery\photo8.jpg" />
+    <Content Include="Content\img\gallery\photo9.jpg" />
+    <Content Include="Content\img\header_line.png" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\lock-avatar.jpg" />
+    <Content Include="Content\img\login-btn.jpg" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\menu-selected-bg.png" />
+    <Content Include="Content\img\news\news-1.jpg" />
+    <Content Include="Content\img\news\news-2.jpg" />
+    <Content Include="Content\img\news\news-3.jpg" />
+    <Content Include="Content\img\news\news-4.jpg" />
+    <Content Include="Content\img\news\news-big-img.jpg" />
+    <Content Include="Content\img\news\news-thumb-1.jpg" />
+    <Content Include="Content\img\news\news-thumb-2.jpg" />
+    <Content Include="Content\img\news\news-thumb-3.jpg" />
+    <Content Include="Content\img\overlay-icon.png" />
+    <Content Include="Content\img\photo.jpg" />
+    <Content Include="Content\img\product.jpg" />
+    <Content Include="Content\img\profile-pic.jpg" />
+    <Content Include="Content\img\side-bar-list-bg.png" />
+    <Content Include="Content\img\submenu_border.png" />
+    <Content Include="Content\img\submenu_hover.png" />
+    <Content Include="Content\img\team\team-1.jpg" />
+    <Content Include="Content\img\team\team-2.jpg" />
+    <Content Include="Content\img\team\team-3.jpg" />
+    <Content Include="Content\img\top-bg.jpg" />
+    <Content Include="Content\img\trns-bg.png" />
+    <Content Include="Content\img\vector-lab.jpg" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery.dataTables.css" />
+    <Content Include="Content\OpenSands.css" />
+    <Content Include="Content\Popup.css" />
+    <Content Include="Content\PopupTabs.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\alert_icon.png" />
+    <Content Include="packages.config" />
+    <Content Include="assets\fonts\roboto-v15-latin-300 - Copy.woff" />
+    <Content Include="assets\fonts\roboto-v15-latin-300 - Copy.woff2" />
+    <Content Include="assets\fonts\roboto-v15-latin-300.woff" />
+    <Content Include="assets\fonts\roboto-v15-latin-300.woff2" />
+    <Content Include="assets\fonts\roboto-v15-latin-500.woff" />
+    <Content Include="assets\fonts\roboto-v15-latin-500.woff2" />
+    <Content Include="assets\fonts\roboto-v15-latin-700.woff" />
+    <Content Include="assets\fonts\roboto-v15-latin-700.woff2" />
+    <Content Include="assets\fonts\roboto-v15-latin-regular - Copy.woff2" />
+    <Content Include="assets\fonts\roboto-v15-latin-regular.woff" />
+    <Content Include="assets\fonts\roboto-v15-latin-regular.woff2" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\font-awesome\less\animated.less" />
+    <Content Include="assets\font-awesome\less\bordered-pulled.less" />
+    <Content Include="assets\font-awesome\less\core.less" />
+    <Content Include="assets\font-awesome\less\fixed-width.less" />
+    <Content Include="assets\font-awesome\less\font-awesome.less" />
+    <Content Include="assets\font-awesome\less\icons.less" />
+    <Content Include="assets\font-awesome\less\larger.less" />
+    <Content Include="assets\font-awesome\less\list.less" />
+    <Content Include="assets\font-awesome\less\mixins.less" />
+    <Content Include="assets\font-awesome\less\path.less" />
+    <Content Include="assets\font-awesome\less\rotated-flipped.less" />
+    <Content Include="assets\font-awesome\less\screen-reader.less" />
+    <Content Include="assets\font-awesome\less\stacked.less" />
+    <Content Include="assets\font-awesome\less\variables.less" />
+    <Content Include="assets\font-awesome\scss\font-awesome.scss" />
+    <Content Include="assets\font-awesome\scss\_animated.scss" />
+    <Content Include="assets\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="assets\font-awesome\scss\_core.scss" />
+    <Content Include="assets\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="assets\font-awesome\scss\_icons.scss" />
+    <Content Include="assets\font-awesome\scss\_larger.scss" />
+    <Content Include="assets\font-awesome\scss\_list.scss" />
+    <Content Include="assets\font-awesome\scss\_mixins.scss" />
+    <Content Include="assets\font-awesome\scss\_path.scss" />
+    <Content Include="assets\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="assets\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="assets\font-awesome\scss\_stacked.scss" />
+    <Content Include="assets\font-awesome\scss\_variables.scss" />
+    <Content Include="handler\CurrencyHandler.ashx" />
+    <Content Include="Content\font\.DS_Store" />
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\FontAwesome.otf" />
+    <Content Include="Content\font\myriadprobold.eot" />
+    <Content Include="Content\font\myriadprobold.ttf" />
+    <Content Include="Content\font\myriadprobold.woff" />
+    <Content Include="Content\font\myriadproit.eot" />
+    <Content Include="Content\font\myriadproit.ttf" />
+    <Content Include="Content\font\myriadproit.woff" />
+    <Content Include="Content\font\myriadprolight.eot" />
+    <Content Include="Content\font\myriadprolight.ttf" />
+    <Content Include="Content\font\myriadprolight.woff" />
+    <Content Include="Content\font\myriadproregular.eot" />
+    <Content Include="Content\font\myriadproregular.ttf" />
+    <Content Include="Content\font\myriadproregular.woff" />
+    <Content Include="Content\img\.DS_Store" />
+    <Content Include="Content\img\blog\.DS_Store" />
+    <Content Include="Content\img\email\.DS_Store" />
+    <Content Include="Content\img\gallery\.DS_Store" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\bootstrap\bootstrap4-alpha3.min.css" />
+    <Content Include="assets\bootstrap\bootstrap4-alpha3.min.js" />
+    <Content Include="assets\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="assets\fonts\font-roboto.css" />
+    <Content Include="assets\jquery\jquery-3.1.0.min.js" />
+    <Content Include="assets\tether\tether.min.js" />
+    <Content Include="assets\web-analytics\overview.js" />
+    <Content Include="assets\web-analytics\index.js" />
+    <Content Include="assets\web-analytics\real-time.js" />
+    <Content Include="assets\web-analytics\style.css" />
+    <Content Include="index.html" />
+    <Content Include="Pages\altcointrader.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="handler\CurrencyHandler.ashx.cs">
+      <DependentUpon>CurrencyHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2406</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CurrencyManager</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,432 @@
+﻿
+.hideBranchOrder {
+    display: none !important;
+}
+
+.showBranchOrder {
+    display: block !important;
+}
+
+input {
+    border-radius: 7px !important;
+    border: 1px;
+    padding-left: 6px;
+    color: #000;
+    width: 140px;
+    margin-left: 6px;
+}
+
+.popupBody {
+    background-color: grey !important;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.shopOk {
+    background-image: url('../Images/48x48/Shopping-Ok.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    width: 32px;
+    height: 32px;
+}
+
+.shopCancel {
+    background-image: url('../Images/48x48/Shopping-Remove.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    width: 32px;
+    height: 32px;
+}
+
+.orderBranchDiv:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px #3b3939;
+}
+
+.orderBranchDiv {
+    padding-bottom: 7px;
+}
+
+.details-control-popup {
+    background-image: url('../Images/Plus-Inactive.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+    .details-control-popup:hover {
+        cursor: pointer;
+    }
+
+thead tr {
+    font-size: 10px !important;
+}
+
+#OrderItemsTable tr {
+    color: #292b2c !important;
+    font-size: 10px !important;
+}
+
+
+.dataTables_scroll {
+    min-height: 10px !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    box-sizing: inherit;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+    *:focus {
+        outline: none;
+    }
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ecf0f1;
+    min-width: 300px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: #eceeef !important;
+    line-height: 1.4;
+}
+
+
+span {
+    font-size: 9pt;
+}
+
+input {
+    border-radius: 7px;
+    border: 1px;
+    padding-left: 6px;
+    color: #000;
+    width: 140px;
+    margin-left: 6px;
+}
+
+select {
+    border-radius: 7px;
+    border: 1px;
+    padding-left: 6px;
+    color: #000;
+    margin-left: 6px;
+    font-size: 9pt;
+    border-radius: 7px !important;
+    height: 24px !important;
+}
+
+.masterPopupPages {
+    border: 1px solid #c0c0c0 !important;
+    margin: 0 2px !important;
+    padding: 0.35em 0.625em 0.75em !important;
+}
+
+
+#loading-div {
+    width: 100%;
+    height: 210px;
+    background-color: #FFF;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -70px;
+}
+
+
+#loading-div-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+#loading-popup-div {
+    width: 100%;
+    height: 170px;
+    background-color: #FFF;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -70px;
+}
+
+/*popups*/
+.ui-dialog-titlebar {
+    display: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    padding: 0em 1em 0em 0em;
+}
+
+    .ui-dialog .ui-dialog-buttonpane button {
+        padding: 0.3em 0.3em .3em 0.3em;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+.ui-datepicker-trigger {
+    display: inline !important;
+}
+
+.popupInfoLabel {
+    padding-top: 3px;
+    padding-right: 5px;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.ui-dialog-buttonpane {
+    background: linear-gradient(grey, #ecf0f1) !important;
+    border: none !important;
+}
+
+.container_popup {
+    background-color: grey !important;
+}
+
+.nav {
+    background-color: #000 !important;
+}
+
+    .nav > li > a {
+        background-color: #666 !important;
+        color: #fff;
+    }
+
+/*popups*/
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"],
+input[type="number"] {
+    max-width: 280px;
+    vertical-align: middle;
+    font-size: 9pt !important;
+    border-radius: 7px !important;
+}
+
+textarea {
+    color: black !important;
+    font-size: 9pt !important;
+}
+
+p {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+#customerClose {
+    border: none;
+    background: transparent;
+    color: #F44336;
+    border: 1px solid transparent;
+}
+
+    #customerClose:hover {
+        background-color: #F44336;
+        color: #FFF;
+        font-weight: bold;
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+#customerSave {
+    border: none;
+    background: transparent;
+    color: #008ABF;
+    border: 1px solid transparent;
+}
+
+    #customerSave:hover {
+        background-color: #008ABF;
+        font-weight: bold;
+        color: #FFF;
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+.ui-dialog-title {
+    font-size: large;
+}
+
+.saveCancelButtons {
+    text-align: center;
+    width: 100px;
+    font-size: 7pt;
+}
+
+.btnSave {
+    color: gray;
+    cursor: pointer;
+}
+
+    .btnSave:hover {
+        color: #33b50f;
+        cursor: pointer;
+    }
+
+.btnCancel {
+    color: gray;
+    cursor: pointer;
+}
+
+    .btnCancel:hover {
+        color: #ae0d0d;
+    }
+
+h1, h2, h3, h4, h5 {
+    display: block;
+    font-weight: 400;
+    cursor: default;
+}
+
+.h2PopupClass {
+    padding-top: 10px;
+    color: #ecf0f1;
+    white-space: nowrap;
+}
+
+footer {
+    cursor: default;
+}
+
+li, span, p, a, h1, h2, h3, h4, h5 {
+    line-height: 1;
+}
+
+h2 {
+    line-height: 0.8;
+}
+
+/*Positioning of frame in pop*/
+.container {
+    min-width: 650px !important;
+    max-width: 100%;
+    /*overflow-y: auto;*/
+}
+/*Positioning of frame in pop END*/
+
+
+.ImageFormatPopup {
+    border-width: 0px;
+    border-radius: 200px;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../Images/nopicture.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.ImageFormatPopupNoRounding {
+    border-width: 0px;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../Images/nopicture.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.popupTabHolder {
+    padding-left: 25px !important;
+}
+
+
+
+/*Round Colosr*/
+
+
+.orderStatusCircle {
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: red;
+    margin-left: 35px;
+}
+
+.orderStatusRed {
+    background: red;
+}
+
+.orderStatusGreen {
+    background: green;
+}
+
+.orderStatusOrange {
+    background: orange;
+}
+
+.orderStatusYellow {
+    background: yellow;
+}
+
+.orderStatusBlue {
+    background: blue;
+}
+
+.orderTrLine tr {
+    vertical-align: bottom;
+}
+
+.orderStatusCircle span {
+    margin-left: 16px;
+}
+
+/*End Round Colosr*/
+
+.dataTables_info {
+    color: white !important;
+}
+
+.dataTables_filter {
+    color: white !important;
+    font-size: 13px;
+}

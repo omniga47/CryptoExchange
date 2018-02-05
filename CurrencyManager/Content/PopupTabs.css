@@ -1,0 +1,49 @@
+﻿.popupHeaderDiv {
+}
+
+.popupTabTable {
+    max-width: 450px;
+    text-align: right;
+}
+
+.popupTabLabel {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.popupTabItem {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #ccc0c0;
+    width: 110px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.activePopupTab {
+    color: #FFF;
+    cursor: pointer;
+    background-color: #008ABF;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 10px;
+    font-weight:500;
+    white-space: nowrap;
+}
+
+.inactivePopupTab {
+    color: #FFF;
+    white-space: nowrap;
+}
+
+    .inactivePopupTab:hover {
+        color: #FFF;
+        cursor: pointer;
+        -webkit-transition: all .3s;
+        transition: all .2s,opacity 1s;
+        background-color: #F25347;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 10px;
+        font-weight:500;
+    }

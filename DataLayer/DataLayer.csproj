@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC478C85-CE43-4BEF-95B8-2F086D4ABAF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataLayer</RootNamespace>
+    <AssemblyName>DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MstCurrencyList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MstCurrencyList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrmCurrency.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrmCurrency.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TrnAltCoinTraderValue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrnAltCoinTraderValue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrnBitStampValue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrnBitStampValue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrnCurrencyValue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrnCurrencyValue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrnKrakenValue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrnKrakenValue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrnLunoValue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrnLunoValue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrnSourceUpdate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrnSourceUpdate.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MstCurrencyList.xsc">
+      <DependentUpon>MstCurrencyList.xsd</DependentUpon>
+    </None>
+    <None Include="MstCurrencyList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MstCurrencyList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MstCurrencyList.xss">
+      <DependentUpon>MstCurrencyList.xsd</DependentUpon>
+    </None>
+    <None Include="PrmCurrency.xsc">
+      <DependentUpon>PrmCurrency.xsd</DependentUpon>
+    </None>
+    <None Include="PrmCurrency.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrmCurrency.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PrmCurrency.xss">
+      <DependentUpon>PrmCurrency.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrnAltCoinTraderValue.xsc">
+      <DependentUpon>TrnAltCoinTraderValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnAltCoinTraderValue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrnAltCoinTraderValue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrnAltCoinTraderValue.xss">
+      <DependentUpon>TrnAltCoinTraderValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnBitStampValue.xsc">
+      <DependentUpon>TrnBitStampValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnBitStampValue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrnBitStampValue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrnBitStampValue.xss">
+      <DependentUpon>TrnBitStampValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnCurrencyValue.xsc">
+      <DependentUpon>TrnCurrencyValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnCurrencyValue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrnCurrencyValue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrnCurrencyValue.xss">
+      <DependentUpon>TrnCurrencyValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnKrakenValue.xsc">
+      <DependentUpon>TrnKrakenValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnKrakenValue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrnKrakenValue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrnKrakenValue.xss">
+      <DependentUpon>TrnKrakenValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnLunoValue.xsc">
+      <DependentUpon>TrnLunoValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnLunoValue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrnLunoValue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrnLunoValue.xss">
+      <DependentUpon>TrnLunoValue.xsd</DependentUpon>
+    </None>
+    <None Include="TrnSourceUpdate.xsc">
+      <DependentUpon>TrnSourceUpdate.xsd</DependentUpon>
+    </None>
+    <None Include="TrnSourceUpdate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrnSourceUpdate.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrnSourceUpdate.xss">
+      <DependentUpon>TrnSourceUpdate.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
